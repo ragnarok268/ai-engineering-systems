@@ -47,6 +47,23 @@ Benchmark evidence, when present, should be reviewed in the relevant project rep
 
 Look for benchmark reports, test fixtures, verification receipts, documented test outputs, and example workflows in each repository.
 
+## Evidence Links
+
+Do not invent metrics. Use the linked repository documentation as the source of truth:
+
+- Agent Memory Layer benchmark evidence: see linked repository documentation.
+- IA verification evidence: see linked repository documentation.
+- DS² structural analysis evidence: see linked repository documentation.
+- System Failure Analysis evidence: see linked repository documentation.
+
+## What Reviewers Should Look For
+
+- Whether the benchmark methodology is clearly described.
+- Whether claims are supported by artifacts.
+- Whether limitations are documented.
+- Whether failure cases are captured.
+- Whether results are reproducible from repository instructions.
+
 ## How Benchmark Evidence Supports Hiring Review
 
 Benchmark evidence helps reviewers assess:

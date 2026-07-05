@@ -2,15 +2,29 @@
 
 This guide is written for hiring reviewers evaluating Brandon Caylor's AI engineering systems work.
 
+## 60-Second Hiring Signal
+
+This ecosystem is strongest evidence for:
+
+- Systems thinking.
+- AI-native engineering workflow design.
+- Verification-first development.
+- Engineering memory and context preservation.
+- Dependency and structural awareness.
+- Documentation quality.
+- Benchmark-oriented evaluation.
+- Practical use of Codex / ChatGPT as implementation accelerators under human-directed engineering review.
+
 ## What To Review First
 
-1. [README.md](README.md)
-2. [START_HERE.md](START_HERE.md)
-3. [ARCHITECTURE.md](ARCHITECTURE.md)
-4. [PROJECT_MAP.md](PROJECT_MAP.md)
-5. [AI_NATIVE_WORKFLOW.md](AI_NATIVE_WORKFLOW.md)
-6. [BENCHMARKS.md](BENCHMARKS.md)
-7. [LIMITATIONS.md](LIMITATIONS.md)
+1. [PORTFOLIO_SUMMARY.md](PORTFOLIO_SUMMARY.md)
+2. [README.md](README.md)
+3. [START_HERE.md](START_HERE.md)
+4. [ARCHITECTURE.md](ARCHITECTURE.md)
+5. [PROJECT_MAP.md](PROJECT_MAP.md)
+6. [AI_NATIVE_WORKFLOW.md](AI_NATIVE_WORKFLOW.md)
+7. [BENCHMARKS.md](BENCHMARKS.md)
+8. [LIMITATIONS.md](LIMITATIONS.md)
 
 ## What This Work Demonstrates
 
@@ -65,3 +79,13 @@ This guide is written for hiring reviewers evaluating Brandon Caylor's AI engine
 ## Review Framing
 
 The strongest review frame is systems engineering judgment: how the work defines problems, preserves context, verifies intent, exposes structure, documents limitations, and uses AI tools without treating them as engineering authority.
+
+## What To Ask In Interview
+
+- How does Agent Memory Layer reduce context loss in AI-assisted development?
+- How does SCP preserve engineering decisions across sessions?
+- How does IA detect or prevent intent drift?
+- How does DS² expose dependency and execution-authority risk?
+- How do Codex and ChatGPT fit into the workflow without replacing engineering judgment?
+- What would be required to move these systems toward production use?
+- What are the current limitations?

@@ -2,6 +2,16 @@
 
 Documentation and architecture for an integrated ecosystem of AI-assisted software engineering systems.
 
+## Reviewer Summary
+
+If you are reviewing this work for hiring, start here:
+
+- [Portfolio Summary](PORTFOLIO_SUMMARY.md) — one-page overview of the engineering ecosystem, best-fit roles, and strongest evidence.
+- [Start Here](START_HERE.md) — guided review paths for recruiters, hiring managers, and engineers.
+- [Hiring Review Guide](HIRING_REVIEW_GUIDE.md) — role fit, strongest signals, known gaps, and suggested interview topics.
+
+This repository is designed to reduce review friction by explaining how the underlying repositories fit together.
+
 ## Mission
 
 This repository is the documentation and navigation hub for an ecosystem of open-source systems focused on reliable AI-assisted software engineering.
@@ -65,25 +75,33 @@ These systems explore ways to make AI-assisted development more reliable, verifi
 
 ```mermaid
 flowchart TD
-    A[AI Engineering Systems] --> B[Agent Memory Layer]
-    A --> C[SCP]
-    A --> D[IA]
-    A --> E[DS2]
-    A --> F[System Failure Analysis]
-    A --> G[Safety Valve]
-    A --> H[GREEN]
-    A --> I[Halt Invariant]
+    A[AI Engineering Systems] --> B[Engineering Memory]
+    B --> C[Agent Memory Layer]
+    B --> D[SCP]
 
-    B --> C
+    A --> E[Verification]
+    E --> F[IA]
+
+    A --> G[Structural Awareness]
+    G --> H[DS²]
+
+    A --> I[Failure Learning]
+    I --> J[System Failure Analysis]
+
+    A --> K[Guardrails / Research]
+    K --> L[Safety Valve]
+    K --> M[GREEN]
+    K --> N[Halt Invariant]
+
     C --> D
-    E --> D
-    D --> F
-    F --> G
-    G --> H
-    H --> I
+    D -. preserved intent .-> F
+    H -. structural evidence .-> F
+    J -. failure evidence .-> F
 ```
 
 Mermaid source: [assets/architecture.mmd](assets/architecture.mmd)
+
+For reviewers who prefer a rendered image, this Mermaid diagram can be exported to SVG or PNG later. The source is maintained in [assets/architecture.mmd](assets/architecture.mmd).
 
 ## AI-Native Engineering Workflow
 
@@ -107,6 +125,15 @@ Review evidence includes:
 
 No benchmark numbers are claimed in this hub unless they are documented in the linked repositories.
 
+## Core Evidence
+
+- Public open-source repositories.
+- Architecture documentation.
+- Benchmark framing and evidence links.
+- AI-native engineering workflow documentation.
+- Honest limitations and roadmap.
+- Direct links to core systems.
+
 ## Known Limitations
 
 This is experimental, open-source work. It is not production-scale infrastructure, not a replacement for formal MLOps platforms, and does not claim enterprise adoption.
@@ -116,6 +143,7 @@ The systems are designed as engineering systems, reference implementations, and 
 ## Navigation
 
 - [START_HERE.md](START_HERE.md)
+- [PORTFOLIO_SUMMARY.md](PORTFOLIO_SUMMARY.md)
 - [ARCHITECTURE.md](ARCHITECTURE.md)
 - [PROJECT_MAP.md](PROJECT_MAP.md)
 - [AI_NATIVE_WORKFLOW.md](AI_NATIVE_WORKFLOW.md)
