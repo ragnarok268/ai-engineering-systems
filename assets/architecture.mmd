@@ -1,0 +1,22 @@
+flowchart TD
+    A[AI Engineering Systems] --> B[Agent Memory Layer]
+    A --> C[SCP]
+    A --> D[IA]
+    A --> E[DS²]
+    A --> F[System Failure Analysis]
+    A --> G[Safety Valve]
+    A --> H[GREEN]
+    A --> I[Halt Invariant]
+
+    B --> C
+    C --> D
+    E --> D
+    D --> F
+    F --> G
+    G --> H
+    H --> I
+
+    B -. preserves context .-> D
+    C -. preserves decisions .-> D
+    E -. exposes structure .-> D
+    F -. feeds lessons .-> B
