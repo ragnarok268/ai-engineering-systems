@@ -80,6 +80,8 @@ Verification addresses intent drift, weak acceptance criteria, and difficulty re
 
 [IA](https://github.com/ragnarok268/IA) is a deterministic verification system for checking AI-generated changes against engineering intent. It supports intent validation, architectural drift detection, constraint verification, and engineering receipts.
 
+Current Hydra milestone: IA's completed Canary capabilities include deterministic diagnostics, evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation.
+
 Inputs:
 
 - stated engineering intent

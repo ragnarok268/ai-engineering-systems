@@ -34,6 +34,20 @@ Brandon Caylor is an AI-native systems engineer focused on reliable AI-assisted 
 | IA | [IA](https://github.com/ragnarok268/IA) | Intent verification for AI-generated changes. |
 | DS² | [DS2](https://github.com/ragnarok268/DS2) | Dependency surface and structural analysis. |
 
+## Flagship Featured Implementations
+
+| Implementation | Repository | What reviewers should look for |
+| --- | --- | --- |
+| RepoLens | [RepoLens](https://github.com/ragnarok268/RepoLens) | Repository inspection and review workflows. |
+| TriageKit | [TriageKit](https://github.com/ragnarok268/TriageKit) | Diagnostic triage and follow-up workflow structure. |
+| IA | [IA](https://github.com/ragnarok268/IA) | Completed Canary capabilities for deterministic diagnostics and intent verification. |
+
+## Hydra Milestone: IA Canary
+
+IA's completed Canary capabilities include deterministic diagnostics, evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation.
+
+These are current implementation capabilities for IA's Canary workflow. They are not presented as production deployment, enterprise adoption, or replacement for formal MLOps platforms.
+
 ## Fast Review Path
 
 **5 minutes**

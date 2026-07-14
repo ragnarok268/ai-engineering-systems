@@ -2,6 +2,40 @@
 
 This map lists the core and supporting systems in the AI Engineering Systems ecosystem.
 
+## Flagship Featured Implementations
+
+### RepoLens
+
+Repository: [https://github.com/ragnarok268/RepoLens](https://github.com/ragnarok268/RepoLens)
+
+One-sentence purpose: Repository inspection and review workflow implementation for understanding project structure.
+
+Hiring Signal: Demonstrates review-oriented tooling, repository navigation, and documentation-friendly engineering workflow design.
+
+Best reviewer path: Review the README, examples, and any documented inspection workflows.
+
+### TriageKit
+
+Repository: [https://github.com/ragnarok268/TriageKit](https://github.com/ragnarok268/TriageKit)
+
+One-sentence purpose: Engineering triage workflow implementation for organizing diagnostic review and follow-up work.
+
+Hiring Signal: Demonstrates structured failure review, diagnostic organization, and practical workflow design.
+
+Best reviewer path: Review the README, examples, and any documented triage flows.
+
+### IA
+
+Repository: [https://github.com/ragnarok268/IA](https://github.com/ragnarok268/IA)
+
+One-sentence purpose: Intent verification and completed Canary diagnostics for AI-generated changes.
+
+Current Hydra milestone: IA Canary includes deterministic diagnostics, evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation.
+
+Hiring Signal: Demonstrates deterministic verification, intent checking, architectural drift detection, and evidence-oriented AI-assisted development.
+
+Best reviewer path: Review the Canary workflow documentation, verification receipts, tests, and benchmark evidence where documented.
+
 ## Core Systems
 
 ### Agent Memory Layer
@@ -36,13 +70,15 @@ Best reviewer path: Read its README, Canon, schema, and example records.
 
 Repository: [https://github.com/ragnarok268/IA](https://github.com/ragnarok268/IA)
 
-One-sentence purpose: Deterministic verification system for checking AI-generated changes against engineering intent.
+One-sentence purpose: Deterministic verification system for checking AI-generated changes against engineering intent, including completed Canary diagnostics.
 
 Problem addressed: AI-generated changes can appear plausible while drifting from the original intent, violating constraints, or changing architecture in unreviewed ways.
 
 How it connects: IA consumes intent, constraints, and implementation evidence. It can be informed by Agent Memory Layer, SCP records, and DS2 structural reports.
 
-Hiring Signal: Demonstrates deterministic verification, intent checking, architectural drift detection, and evidence-oriented AI-assisted development.
+Current Hydra milestone: IA Canary includes deterministic diagnostics, evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation.
+
+Hiring Signal: Demonstrates deterministic verification, intent checking, architectural drift detection, evidence collection, failure classification, and bounded repair guidance for AI-assisted development.
 
 Best reviewer path: Review the verification model, example receipts, tests, and any benchmark reports.
 

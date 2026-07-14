@@ -53,6 +53,9 @@ Do not invent metrics. Use the linked repository documentation as the source of 
 
 - Agent Memory Layer benchmark evidence: see linked repository documentation.
 - IA verification evidence: see linked repository documentation.
+- IA Canary evidence: see linked repository documentation for deterministic diagnostics, evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation.
+- RepoLens evidence: see linked repository documentation.
+- TriageKit evidence: see linked repository documentation.
 - DS² structural analysis evidence: see linked repository documentation.
 - System Failure Analysis evidence: see linked repository documentation.
 

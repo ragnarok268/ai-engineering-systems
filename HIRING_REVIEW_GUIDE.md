@@ -15,6 +15,16 @@ This ecosystem is strongest evidence for:
 - Benchmark-oriented evaluation.
 - Practical use of Codex / ChatGPT as implementation accelerators under human-directed engineering review.
 
+## Flagship Implementations To Review
+
+| Implementation | Repository | Hiring signal |
+| --- | --- | --- |
+| RepoLens | [RepoLens](https://github.com/ragnarok268/RepoLens) | Repository inspection and review workflow design. |
+| TriageKit | [TriageKit](https://github.com/ragnarok268/TriageKit) | Diagnostic triage and follow-up workflow structure. |
+| IA | [IA](https://github.com/ragnarok268/IA) | Completed Canary diagnostics and deterministic intent verification. |
+
+IA's current Canary capabilities include deterministic diagnostics, evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation.
+
 ## What To Review First
 
 1. [PORTFOLIO_SUMMARY.md](PORTFOLIO_SUMMARY.md)
@@ -72,6 +82,7 @@ This ecosystem is strongest evidence for:
 - How Agent Memory Layer preserves engineering context
 - How SCP captures durable engineering decisions
 - How IA verifies intent
+- How IA's Canary workflow collects evidence, classifies failures, and grounds hypotheses
 - How DS² maps structural risk
 - How AI-assisted coding is verified
 - How these systems could evolve toward production workflows
@@ -85,6 +96,7 @@ The strongest review frame is systems engineering judgment: how the work defines
 - How does Agent Memory Layer reduce context loss in AI-assisted development?
 - How does SCP preserve engineering decisions across sessions?
 - How does IA detect or prevent intent drift?
+- How does IA's Canary workflow keep repair recommendations bounded?
 - How does DS² expose dependency and execution-authority risk?
 - How do Codex and ChatGPT fit into the workflow without replacing engineering judgment?
 - What would be required to move these systems toward production use?

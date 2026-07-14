@@ -53,13 +53,37 @@ These systems explore ways to make AI-assisted development more reliable, verifi
 - Review [BENCHMARKS.md](BENCHMARKS.md).
 - Open the core repositories.
 
+## Flagship Featured Implementations
+
+These are the three fastest implementation-level entry points for reviewers.
+
+| Implementation | Repository | Review focus |
+| --- | --- | --- |
+| RepoLens | [RepoLens](https://github.com/ragnarok268/RepoLens) | Repository inspection and review workflows that help make project structure easier to understand. |
+| TriageKit | [TriageKit](https://github.com/ragnarok268/TriageKit) | Engineering triage workflows for organizing diagnostic review and follow-up work. |
+| IA | [IA](https://github.com/ragnarok268/IA) | Intent verification and Canary diagnostics for AI-generated changes. |
+
+## Current Hydra Milestone
+
+The current Hydra milestone highlights IA's completed Canary capabilities:
+
+- deterministic diagnostics
+- evidence collection
+- failure classification
+- grounded hypotheses
+- bounded repair recommendations
+- regression guidance
+- validation
+
+These capabilities are presented as completed Canary functionality in IA, not as production deployment or enterprise adoption claims.
+
 ## Core Systems
 
 | System | Purpose | Repository | Primary engineering concern |
 | --- | --- | --- | --- |
 | Agent Memory Layer | Repository-local engineering memory for AI-assisted software development. | [agent-memory-layer](https://github.com/ragnarok268/agent-memory-layer) | Preserving context, intent, workflows, and project knowledge across sessions. |
 | SCP | Persistent engineering knowledge and decision-preservation model. | [scp](https://github.com/ragnarok268/scp) | Capturing origins, milestones, rationale, constraints, and significant engineering decisions. |
-| IA | Deterministic verification system for checking AI-generated changes against engineering intent. | [IA](https://github.com/ragnarok268/IA) | Intent validation, architectural drift detection, constraint verification, and engineering receipts. |
+| IA | Deterministic verification system for checking AI-generated changes against engineering intent, including completed Canary diagnostics. | [IA](https://github.com/ragnarok268/IA) | Intent validation, Canary evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation. |
 | DS² | Dependency surface and structural analysis system. | [DS2](https://github.com/ragnarok268/DS2) | Mapping dependency relationships, inherited execution authority, structural risk, and capability surfaces. |
 
 ## Supporting Systems
@@ -133,6 +157,7 @@ No benchmark numbers are claimed in this hub unless they are documented in the l
 - AI-native engineering workflow documentation.
 - Honest limitations and roadmap.
 - Direct links to core systems.
+- Flagship implementation links for RepoLens, TriageKit, and IA.
 
 ## Known Limitations
 
