@@ -41,7 +41,7 @@ Benchmark evidence, when present, should be reviewed in the relevant project rep
 
 - [Agent Memory Layer](https://github.com/ragnarok268/agent-memory-layer)
 - [SCP](https://github.com/ragnarok268/scp)
-- [IA](https://github.com/ragnarok268/IA)
+- [Intent Audit (repository `IA`)](https://github.com/ragnarok268/IA)
 - [DS2](https://github.com/ragnarok268/DS2)
 - [System Failure Analysis](https://github.com/ragnarok268/system-failure-analysis)
 
@@ -52,8 +52,8 @@ Look for benchmark reports, test fixtures, verification receipts, documented tes
 Do not invent metrics. Use the linked repository documentation as the source of truth:
 
 - Agent Memory Layer benchmark evidence: see linked repository documentation.
-- IA verification evidence: see linked repository documentation.
-- IA Canary evidence: see linked repository documentation for deterministic diagnostics, evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation.
+- Intent Audit verification evidence: see linked repository documentation.
+- Intent Audit Canary evidence: see linked repository documentation for deterministic diagnostics, evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation.
 - RepoLens evidence: see linked repository documentation.
 - TriageKit evidence: see linked repository documentation.
 - DS² structural analysis evidence: see linked repository documentation.

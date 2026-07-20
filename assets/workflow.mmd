@@ -1,11 +1,8 @@
-flowchart TD
-    A[Problem definition] --> B[Architecture-first planning]
-    B --> C[AI-assisted implementation with Codex and ChatGPT]
-    C --> D[Intent verification with IA]
-    D --> E[Structural review with DS²]
-    E --> F[Engineering memory with SCP and Agent Memory Layer]
-    F --> G[Testing]
-    G --> H[Benchmarking]
-    H --> I[Documentation]
-    I --> J[Review and iteration]
-    J --> B
+flowchart LR
+    A["Problem definition"] --> B["Requirements and constraints"]
+    B --> C["Architecture"]
+    C --> D["AI-assisted implementation"]
+    D --> E["Human review and deterministic validation"]
+    E --> F["Evidence"]
+    F --> G["Regression protection"]
+    G -. "new evidence informs the next change" .-> A

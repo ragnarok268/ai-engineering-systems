@@ -1,67 +1,50 @@
-# AI-Native Engineering Workflow
+# Human-Directed, AI-Assisted Engineering Workflow
 
-I do not present AI tool use as a shortcut. I use AI as part of a structured engineering workflow.
-
-The core idea is simple: AI accelerates implementation, while human engineering judgment controls architecture, verification, acceptance, and release.
+AI tools accelerate implementation; human judgment controls requirements, architecture, constraints, review, verification, acceptance, and final responsibility.
 
 ```mermaid
-flowchart TD
-    A[Problem definition] --> B[Architecture-first planning]
-    B --> C[AI-assisted implementation with Codex and ChatGPT]
-    C --> D[Intent verification with IA]
-    D --> E[Structural review with DS²]
-    E --> F[Engineering memory with SCP and Agent Memory Layer]
-    F --> G[Testing]
-    G --> H[Benchmarking]
-    H --> I[Documentation]
-    I --> J[Review and iteration]
-    J --> B
+flowchart LR
+    A["Problem definition"] --> B["Requirements and constraints"]
+    B --> C["Architecture"]
+    C --> D["AI-assisted implementation"]
+    D --> E["Human review and deterministic validation"]
+    E --> F["Evidence"]
+    F --> G["Regression protection"]
+    G -. "new evidence informs the next change" .-> A
 ```
 
-Mermaid source: [assets/workflow.mmd](assets/workflow.mmd)
+Mermaid source: [assets/workflow.mmd](assets/workflow.mmd).
 
-## 1. Problem Definition
+## 1. Define the Problem
 
-The workflow starts by defining the engineering problem, constraints, non-goals, and expected evidence. This step keeps implementation from beginning before the desired behavior is clear.
+State expected behavior, non-goals, risks, and the evidence required for acceptance.
 
-## 2. Architecture-First Planning
+## 2. Record Requirements, Constraints, and Invariants
 
-Before implementation, the intended structure and system boundaries are identified. This includes deciding what should change, what should remain stable, and what evidence will show that the change is acceptable.
+Make important boundaries inspectable before implementation. Intent Audit can encode a deliberately small set of repository constraints; SCP can preserve adoption-forward decisions where useful. Tool use is selected per task, not assumed as a runtime chain.
 
-## 3. AI-Assisted Implementation Using Codex / ChatGPT
+## 3. Design the Change
 
-OpenAI Codex and ChatGPT are used as implementation accelerators. They help draft changes, explore alternatives, generate tests, summarize context, and speed up mechanical work.
+Identify system boundaries, responsibilities, data flow, failure modes, and compatibility concerns before implementation where the risk justifies it.
 
-They do not replace engineering judgment. Architecture, constraints, acceptance criteria, and release decisions remain human-directed.
+## 4. Implement with AI Assistance
 
-## 4. Intent Verification Using IA
+Codex and ChatGPT may help draft changes, explore alternatives, generate tests, and perform mechanical work. Generated output is treated as untrusted until reviewed.
 
-IA is used to compare implementation against engineering intent. The goal is to detect drift, missed constraints, architectural mismatch, and unsupported changes before they are treated as complete.
+## 5. Review and Verify
 
-## 5. Structural Review Using DS²
+Inspect the diff, run relevant tests and static checks, compare behavior with explicit intent, and examine failure paths. RepoLens, DS2, Intent Audit, or other tools may provide evidence where applicable; this is not a claim that every project integrates them.
 
-DS² is used to review dependency relationships, structural risk, inherited execution authority, and capability surfaces. This helps catch risks that may not appear in a line-by-line code review.
+## 6. Preserve Evidence
 
-## 6. Engineering Memory Through SCP / Agent Memory Layer
+Keep useful tests, receipts, reports, citations, example outputs, and documentation. Clearly distinguish executed results from plans or hypotheses.
 
-SCP and Agent Memory Layer preserve important context from adoption forward. This includes decisions, constraints, project intent, and workflow knowledge that future humans or AI sessions should not have to rediscover.
+## 7. Add Regression Protection
 
-## 7. Testing
+Protect corrected behavior with deterministic tests or checks where practical. Record remaining assumptions and limitations.
 
-Tests provide executable evidence that behavior matches expectations. Test scope depends on the system and change, but the workflow treats tests as part of the review process rather than a final formality.
+## Acceptance Standard
 
-## 8. Benchmarking
+Fluency and speed are not acceptance criteria. Work is accepted only when implementation and evidence support the intended behavior and a human reviewer takes responsibility for the result.
 
-Benchmarks are used where appropriate to evaluate repeatable concerns such as intent preservation, constraint compliance, architectural consistency, verification quality, and regression prevention.
-
-## 9. Documentation
-
-Documentation is treated as engineering work. It explains what the system does, how to review it, what evidence exists, and what limitations apply.
-
-## 10. Review and Iteration
-
-The workflow ends with review, correction, and iteration. AI-assisted output is not accepted because it is fluent or fast. It is accepted only when the implementation, evidence, and documentation support the intended engineering outcome.
-
-## Why This Matters
-
-The ecosystem exists to make AI-assisted development more reliable and reviewable. It does this by preserving context, verifying intent, exposing structure, learning from failures, and documenting limitations.
+See [ENGINEERING_PRINCIPLES.md](ENGINEERING_PRINCIPLES.md).

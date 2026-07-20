@@ -1,85 +1,42 @@
 # Start Here
 
-This guide is for recruiters, hiring managers, engineers, and AI platform teams reviewing Brandon Caylor's AI engineering systems.
+This guide routes reviewers through public evidence from independent engineering work completed 2023–Present.
 
-## For Recruiters
+## Recruiter or Hiring Manager — approximately 5 minutes
 
-Start with the overall signal: this is a documentation hub for original, open-source engineering systems focused on reliable AI-assisted software development.
-
-The most relevant takeaway is the pattern of work: architecture-first systems thinking, disciplined AI tool use, verification, documentation, and evidence-oriented review. This is not presented as a commercial platform or production deployment claim.
-
-Recommended path:
+Start with capabilities and role fit:
 
 1. Read [README.md](README.md).
-2. Review the core systems table.
-3. Open [HIRING_REVIEW_GUIDE.md](HIRING_REVIEW_GUIDE.md).
+2. Scan its capability-to-evidence matrix.
+3. Review [TriageKit](https://github.com/ragnarok268/TriageKit) for backend reliability.
+4. Review [Intent Audit](https://github.com/ragnarok268/IA) for deterministic verification.
+5. Open [HIRING_REVIEW_GUIDE.md](HIRING_REVIEW_GUIDE.md).
 
-## For Hiring Managers
+## Backend or Python Review — approximately 15 minutes
 
-Use this repository to understand how the systems connect and what engineering concerns they address.
+Focus on implementation evidence:
 
-The core message is that AI-assisted development needs durable memory, intent verification, dependency awareness, failure learning, and guardrails. The projects in this ecosystem explore those concerns through open-source systems and documentation.
+1. TriageKit: FastAPI, JWT authentication, SQLAlchemy persistence, Alembic migration, structured logging, request IDs, bounded retries, health endpoints, Docker Compose, CI, and tests.
+2. RepoLens: local indexing, Chroma persistence, citations, retrieval tests, and architecture mapping.
+3. DS2: manifest/import scanning, authority classification, deterministic outputs, and golden tests.
+4. SCP: YAML decision records, repository identity checks, preflight guards, CI, and tests.
 
-Recommended path:
+## AI Systems and Reliability Review — approximately 15 minutes
 
-1. Read [README.md](README.md).
-2. Read [PROJECT_MAP.md](PROJECT_MAP.md).
-3. Review [AI_NATIVE_WORKFLOW.md](AI_NATIVE_WORKFLOW.md).
-4. Review [LIMITATIONS.md](LIMITATIONS.md).
+1. Intent Audit: explicit intent, constraint checks, receipts, Canary diagnostics, and tests.
+2. TriageKit: provider boundaries, transient-failure handling, reliability metadata, and observability.
+3. System Failure Analysis: evidence-bounded case studies and verification gaps.
+4. Safety Valve: deterministic pre-inference routing and receipt invariants.
+5. [ARCHITECTURE.md](ARCHITECTURE.md) and [ENGINEERING_PRINCIPLES.md](ENGINEERING_PRINCIPLES.md).
 
-## For Senior Engineers
+## Developer Tooling Review — approximately 15 minutes
 
-Review the system boundaries, inputs, outputs, and verification posture. The useful question is not whether every system is production-scale. It is whether the architecture shows clear reasoning about context preservation, intent drift, dependency surfaces, and reviewable AI-assisted changes.
+Review [RepoLens](https://github.com/ragnarok268/RepoLens), [DS2](https://github.com/ragnarok268/DS2), [SCP](https://github.com/ragnarok268/scp), and [Intent Audit](https://github.com/ragnarok268/IA), following the tests and artifact links in the README.
 
-Recommended path:
+## Full Technical Review — 30 minutes or more
 
-1. Read [ARCHITECTURE.md](ARCHITECTURE.md).
-2. Review [BENCHMARKS.md](BENCHMARKS.md).
-3. Open the core repositories.
-4. Compare claims in this hub against linked evidence.
+Read [ARCHITECTURE.md](ARCHITECTURE.md), [PROJECT_MAP.md](PROJECT_MAP.md), [AI_NATIVE_WORKFLOW.md](AI_NATIVE_WORKFLOW.md), [ENGINEERING_PRINCIPLES.md](ENGINEERING_PRINCIPLES.md), [BENCHMARKS.md](BENCHMARKS.md), [LIMITATIONS.md](LIMITATIONS.md), and [ROADMAP.md](ROADMAP.md). Compare hub claims with linked source, tests, CI, receipts, and limitations.
 
-## For AI Platform / Infrastructure Teams
+## Evidence Boundary
 
-Focus on workflow design and reliability concerns:
-
-- how engineering context is preserved
-- how intent is verified
-- how dependency and authority surfaces are mapped
-- how failures become reusable evidence
-- how AI implementation is kept subordinate to human-directed architecture and review
-
-Recommended path:
-
-1. Read [AI_NATIVE_WORKFLOW.md](AI_NATIVE_WORKFLOW.md).
-2. Read [ARCHITECTURE.md](ARCHITECTURE.md).
-3. Review IA and DS2.
-4. Review [ROADMAP.md](ROADMAP.md).
-
-## Suggested Review Order
-
-1. [README.md](README.md)
-2. [ARCHITECTURE.md](ARCHITECTURE.md)
-3. [PROJECT_MAP.md](PROJECT_MAP.md)
-4. [AI_NATIVE_WORKFLOW.md](AI_NATIVE_WORKFLOW.md)
-5. [BENCHMARKS.md](BENCHMARKS.md)
-6. [LIMITATIONS.md](LIMITATIONS.md)
-7. [HIRING_REVIEW_GUIDE.md](HIRING_REVIEW_GUIDE.md)
-
-## What This Portfolio Demonstrates
-
-- AI-native engineering workflow design
-- architecture-first documentation
-- verification-first thinking
-- deterministic tooling where practical
-- structured reasoning about engineering memory
-- dependency and structural awareness
-- failure analysis and regression prevention
-- public, reviewable open-source work
-
-## What It Does Not Claim
-
-- production-scale enterprise infrastructure
-- enterprise customers or adoption
-- revenue, funding, or commercial deployment
-- replacement for full MLOps, SRE, or security platforms
-- Kubernetes, GPU, CUDA, Terraform, or cloud-scale implementation unless separately documented in a linked repository
+This is independent and open-source work. Production-oriented practices are identified where code supports them, but no production deployment, production traffic, customers, commercial adoption, or external pull-request activity is claimed.

@@ -1,77 +1,43 @@
-# Brandon Caylor — AI Engineering Systems Summary
+# Engineering Evidence Summary
 
-Brandon Caylor is an AI-native systems engineer focused on reliable AI-assisted software engineering. This documentation hub explains an integrated ecosystem of open-source engineering systems for engineering memory, intent verification, dependency awareness, failure analysis, and disciplined AI-assisted development workflows.
+Independent engineering work completed 2023–Present, organized for three related review paths:
 
-## What This Demonstrates
+- **Primary:** AI Systems & Software Reliability Engineer
+- **Additional:** Backend Software Engineer — Python, FastAPI, reliability engineering
+- **Additional:** Developer Tooling / Repository Intelligence Engineer
 
-- AI-native engineering workflow using tools such as OpenAI Codex and ChatGPT within a human-directed engineering process.
-- Architecture-first planning and documentation.
-- Deterministic verification and engineering receipts.
-- Engineering memory and decision preservation.
-- Dependency surface and structural awareness.
-- Benchmark-oriented evaluation of AI-assisted development workflows.
-- Honest limitations and roadmap-driven improvement.
+These are positioning statements, not employment claims.
 
-## Best-Fit Roles
+## Strongest Evidence
 
-- AI Systems Engineer
-- AI Platform Engineer
-- AI Reliability Engineer
-- AI Infrastructure Engineer
-- Agent Systems Engineer
-- AI Tooling Engineer
-- Developer Productivity Engineer
-- AI Workflow Engineer
-- AI Solutions Engineer
-- Forward Deployed Engineer (AI)
-
-## Core Systems
-
-| System | Repository | Purpose |
+| Capability | Repository | Demonstrated implementation |
 | --- | --- | --- |
-| Agent Memory Layer | [agent-memory-layer](https://github.com/ragnarok268/agent-memory-layer) | Engineering memory for AI-assisted software development. |
-| SCP | [scp](https://github.com/ragnarok268/scp) | Persistent engineering knowledge and decision preservation. |
-| IA | [IA](https://github.com/ragnarok268/IA) | Intent verification for AI-generated changes. |
-| DS² | [DS2](https://github.com/ragnarok268/DS2) | Dependency surface and structural analysis. |
+| Reliable Python backend engineering | [TriageKit](https://github.com/ragnarok268/TriageKit) | FastAPI, JWT auth, SQLAlchemy, Alembic, logging, request IDs, bounded retries, health checks, Docker Compose, CI, and tests |
+| Deterministic intent verification | [Intent Audit](https://github.com/ragnarok268/IA) | Local intent contract, deterministic detectors, Markdown/JSON receipts, Canary diagnostics, fixtures, and tests |
+| Repository intelligence | [RepoLens](https://github.com/ragnarok268/RepoLens) | Deterministic indexing/chunking, Chroma persistence, offline embeddings, citations, architecture map, and tests |
+| Failure investigation | [System Failure Analysis](https://github.com/ragnarok268/system-failure-analysis) | Five case studies separating direct evidence, reconstruction, missing verification, and regression proposals |
+| Context and boundary preservation | [SCP](https://github.com/ragnarok268/scp) | Adoption-forward decision records, Canon validation, identity checks, preflight guards, CI, and tests |
+| Dependency and authority analysis | [DS2](https://github.com/ragnarok268/DS2) | Dependency/import maps, exposure classification, reports, stable-hash receipts, golden artifacts, CI, and tests |
+| Deterministic guardrails | [Safety Valve](https://github.com/ragnarok268/safety-valve) | Local `ALLOW`/`BLOCK`/`SANDBOX` routing, policy receipts, examples, and tests |
 
-## Flagship Featured Implementations
+## Engineering Signals
 
-| Implementation | Repository | What reviewers should look for |
-| --- | --- | --- |
-| RepoLens | [RepoLens](https://github.com/ragnarok268/RepoLens) | Repository inspection and review workflows. |
-| TriageKit | [TriageKit](https://github.com/ragnarok268/TriageKit) | Diagnostic triage and follow-up workflow structure. |
-| IA | [IA](https://github.com/ragnarok268/IA) | Completed Canary capabilities for deterministic diagnostics and intent verification. |
+- Explicit requirements, constraints, and invariants
+- Architecture and boundary reasoning
+- Deterministic validation where practical
+- Automated tests and regression protection
+- Inspectable receipts, reports, and citations
+- Root-cause and failure-mechanism analysis
+- Honest differentiation between observed evidence and future work
 
-## Hydra Milestone: IA Canary
+## Role Alignment
 
-IA's completed Canary capabilities include deterministic diagnostics, evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation.
+**AI systems and reliability:** Intent Audit, TriageKit, System Failure Analysis, Safety Valve, and SCP.
 
-These are current implementation capabilities for IA's Canary workflow. They are not presented as production deployment, enterprise adoption, or replacement for formal MLOps platforms.
+**Backend software engineering:** TriageKit is the clearest end-to-end backend implementation; RepoLens, SCP, and DS2 add Python tooling, persistence, validation, and CI evidence.
 
-## Fast Review Path
+**Developer tooling and repository intelligence:** RepoLens, DS2, SCP, and Intent Audit.
 
-**5 minutes**
+## Boundaries
 
-- Read this summary.
-- Review [README.md](README.md).
-- Open [Agent Memory Layer](https://github.com/ragnarok268/agent-memory-layer).
-
-**15 minutes**
-
-- Review [ARCHITECTURE.md](ARCHITECTURE.md).
-- Review [AI_NATIVE_WORKFLOW.md](AI_NATIVE_WORKFLOW.md).
-- Review [PROJECT_MAP.md](PROJECT_MAP.md).
-
-**30+ minutes**
-
-- Review [BENCHMARKS.md](BENCHMARKS.md).
-- Review [HIRING_REVIEW_GUIDE.md](HIRING_REVIEW_GUIDE.md).
-- Open the core repositories.
-
-## What This Does Not Claim
-
-- Does not claim enterprise adoption.
-- Does not claim production-scale AI infrastructure.
-- Does not claim replacement of MLOps, SRE, or security platforms.
-- Does not claim large-scale Kubernetes, GPU, or cloud production operations.
-- Presents open-source, experimental, research-informed engineering systems.
+The work is independent and open source. Repository maturity and evidence depth vary. No production traffic, production-scale operation, employer or customer relationship, commercial deployment, enterprise adoption, submitted external pull request, or merged contribution is claimed. See [LIMITATIONS.md](LIMITATIONS.md).

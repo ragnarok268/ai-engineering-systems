@@ -1,23 +1,17 @@
 flowchart TD
-    A[AI Engineering Systems] --> B[Engineering Memory]
-    B --> C[Agent Memory Layer]
-    B --> D[SCP]
-
-    A --> E[Verification]
-    E --> F[IA]
-
-    A --> G[Structural Awareness]
-    G --> H[DS²]
-
-    A --> I[Failure Learning]
-    I --> J[System Failure Analysis]
-
-    A --> K[Guardrails / Research]
-    K --> L[Safety Valve]
-    K --> M[GREEN]
-    K --> N[Halt Invariant]
-
-    C --> D
-    D -. preserved intent .-> F
-    H -. structural evidence .-> F
-    J -. failure evidence .-> F
+    Hub["Engineering evidence hub"] --> Backend["Backend and Runtime Reliability"]
+    Hub --> Verify["Verification and Intent Preservation"]
+    Hub --> Intel["Repository Intelligence"]
+    Hub --> Structure["Structural and Dependency Analysis"]
+    Hub --> Memory["Engineering Memory and Context"]
+    Hub --> Failure["Failure Analysis and Guardrails"]
+    Backend --> Triage["TriageKit"]
+    Verify --> IA["Intent Audit"]
+    Intel --> RepoLens["RepoLens"]
+    Structure --> DS2["DS2"]
+    Memory --> SCP["SCP"]
+    Failure --> SFA["System Failure Analysis"]
+    Failure --> Safety["Safety Valve"]
+    SCP -. "context can inform review" .-> IA
+    DS2 -. "structural evidence can inform review" .-> IA
+    SFA -. "failure evidence can inform regression criteria" .-> IA

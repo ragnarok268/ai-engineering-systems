@@ -1,103 +1,52 @@
 # Hiring Review Guide
 
-This guide is written for hiring reviewers evaluating Brandon Caylor's AI engineering systems work.
+Use this guide to evaluate independent engineering evidence for three role families.
 
-## 60-Second Hiring Signal
+## Role Fit
 
-This ecosystem is strongest evidence for:
+### AI Systems & Software Reliability Engineer
 
-- Systems thinking.
-- AI-native engineering workflow design.
-- Verification-first development.
-- Engineering memory and context preservation.
-- Dependency and structural awareness.
-- Documentation quality.
-- Benchmark-oriented evaluation.
-- Practical use of Codex / ChatGPT as implementation accelerators under human-directed engineering review.
+**Demonstrated evidence:** deterministic intent verification in Intent Audit; provider-failure and retry behavior in TriageKit; failure-mechanism case studies; deterministic guardrail routing.
 
-## Flagship Implementations To Review
+**Supporting evidence:** SCP context preservation and DS2 authority-surface analysis.
 
-| Implementation | Repository | Hiring signal |
-| --- | --- | --- |
-| RepoLens | [RepoLens](https://github.com/ragnarok268/RepoLens) | Repository inspection and review workflow design. |
-| TriageKit | [TriageKit](https://github.com/ragnarok268/TriageKit) | Diagnostic triage and follow-up workflow structure. |
-| IA | [IA](https://github.com/ragnarok268/IA) | Completed Canary diagnostics and deterministic intent verification. |
+**Growth areas:** operational deployment evidence, sustained production traffic, and external contribution outcomes.
 
-IA's current Canary capabilities include deterministic diagnostics, evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation.
+### Backend Software Engineer
 
-## What To Review First
+**Demonstrated evidence:** TriageKit's FastAPI API, authentication, persistence, migrations, structured logging, request IDs, health endpoints, bounded retries, Docker Compose, CI, and automated tests.
 
-1. [PORTFOLIO_SUMMARY.md](PORTFOLIO_SUMMARY.md)
-2. [README.md](README.md)
-3. [START_HERE.md](START_HERE.md)
-4. [ARCHITECTURE.md](ARCHITECTURE.md)
-5. [PROJECT_MAP.md](PROJECT_MAP.md)
-6. [AI_NATIVE_WORKFLOW.md](AI_NATIVE_WORKFLOW.md)
-7. [BENCHMARKS.md](BENCHMARKS.md)
-8. [LIMITATIONS.md](LIMITATIONS.md)
+**Supporting evidence:** Python CLIs, schemas, persistence, deterministic outputs, and test suites in RepoLens, SCP, DS2, and Intent Audit.
 
-## What This Work Demonstrates
+**Growth areas:** deployed service telemetry, load testing, and production operations evidence.
 
-- architecture-first thinking
-- AI-native engineering workflow
-- original open-source systems
-- verification and governance
-- documentation quality
-- benchmark orientation
-- structured problem solving
-- use of Codex and AI tools within a disciplined engineering process
+### Developer Tooling / Repository Intelligence Engineer
 
-## Best-Fit Roles
+**Demonstrated evidence:** RepoLens indexing/retrieval/citations; DS2 dependency and authority reports; SCP repository identity/preflight guards; Intent Audit verification receipts.
 
-- AI Systems Engineer
-- AI Platform Engineer
-- AI Reliability Engineer
-- AI Infrastructure Engineer
-- AI Solutions Engineer
-- Agent Systems Engineer
-- AI Tooling Engineer
-- Developer Productivity Engineer
-- AI Workflow Engineer
-- Forward Deployed Engineer (AI)
+**Supporting evidence:** documentation quality, reviewer workflows, and committed examples.
 
-## Strongest Signals
+**Growth areas:** broader repository fixtures, measured performance, packaging/adoption evidence, and external feedback.
 
-- architecture-first thinking
-- AI-native engineering workflow
-- original open-source systems
-- verification and governance
-- documentation quality
-- benchmark orientation
-- structured problem solving
-- use of Codex/AI tools within a disciplined engineering process
+## Suggested Review Order
 
-## Known Gaps
+1. [README.md](README.md) and its capability matrix.
+2. [TriageKit](https://github.com/ragnarok268/TriageKit).
+3. [Intent Audit](https://github.com/ragnarok268/IA).
+4. [RepoLens](https://github.com/ragnarok268/RepoLens).
+5. [System Failure Analysis](https://github.com/ragnarok268/system-failure-analysis).
+6. [ARCHITECTURE.md](ARCHITECTURE.md), [ENGINEERING_PRINCIPLES.md](ENGINEERING_PRINCIPLES.md), and [LIMITATIONS.md](LIMITATIONS.md).
 
-- limited production-scale AI infrastructure evidence
-- limited Kubernetes/GPU/cloud-scale examples unless separately documented
-- independent/open-source work rather than traditional enterprise AI platform experience
+## Interview Topics
 
-## Suggested Interview Topics
+- Which transient failures TriageKit retries and why retries are bounded
+- How Intent Audit converts explicit intent into deterministic findings
+- How RepoLens keeps answers source-grounded
+- What DS2 can and cannot infer from static dependencies and imports
+- How SCP protects repository identity and preserves adoption-forward decisions
+- How direct, inferred, and missing evidence are separated in failure case studies
+- What additional evidence would be required before claiming production operation
 
-- How Agent Memory Layer preserves engineering context
-- How SCP captures durable engineering decisions
-- How IA verifies intent
-- How IA's Canary workflow collects evidence, classifies failures, and grounds hypotheses
-- How DS² maps structural risk
-- How AI-assisted coding is verified
-- How these systems could evolve toward production workflows
+## Evidence Boundary
 
-## Review Framing
-
-The strongest review frame is systems engineering judgment: how the work defines problems, preserves context, verifies intent, exposes structure, documents limitations, and uses AI tools without treating them as engineering authority.
-
-## What To Ask In Interview
-
-- How does Agent Memory Layer reduce context loss in AI-assisted development?
-- How does SCP preserve engineering decisions across sessions?
-- How does IA detect or prevent intent drift?
-- How does IA's Canary workflow keep repair recommendations bounded?
-- How does DS² expose dependency and execution-authority risk?
-- How do Codex and ChatGPT fit into the workflow without replacing engineering judgment?
-- What would be required to move these systems toward production use?
-- What are the current limitations?
+These documents support hiring review; they do not claim employment under the target titles. No external pull requests have been submitted yet, and no production deployment, traffic, customer use, commercial adoption, or maintainer acceptance is claimed.

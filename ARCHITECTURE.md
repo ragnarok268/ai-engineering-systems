@@ -1,166 +1,55 @@
-# Architecture
+# Capability and Evidence Map
 
-The ecosystem is organized as a layered set of engineering systems for making AI-assisted software development more reliable and reviewable.
-
-The layers are not a single monolithic product. They are related open-source systems that address different failure modes in AI-assisted engineering.
+This hub maps engineering capabilities to independent public repositories. The diagram is a review and reasoning model, not a deployed topology or claim that all repositories form one runtime.
 
 ```mermaid
 flowchart TD
-    Human[Human engineering review] --> Workflow[AI-assisted engineering workflow]
-    Workflow --> Memory[Engineering Memory]
-    Workflow --> Verify[Verification]
-    Workflow --> Structure[Structural Awareness]
-    Workflow --> Failure[Failure Learning]
-    Workflow --> Guardrails[Guardrails and Research]
-
-    Memory --> AML[Agent Memory Layer]
-    Memory --> SCP[SCP]
-    Verify --> IA[IA]
-    Structure --> DS2[DS²]
-    Failure --> SFA[System Failure Analysis]
-    Guardrails --> Safety[Safety Valve]
-    Guardrails --> GREEN[GREEN]
-    Guardrails --> Halt[Halt Invariant]
-
-    AML --> SCP
-    SCP --> IA
-    DS2 --> IA
-    IA --> SFA
+    Hub["Engineering evidence hub"] --> Backend["Backend and Runtime Reliability"]
+    Hub --> Verify["Verification and Intent Preservation"]
+    Hub --> Intel["Repository Intelligence"]
+    Hub --> Structure["Structural and Dependency Analysis"]
+    Hub --> Memory["Engineering Memory and Context"]
+    Hub --> Failure["Failure Analysis and Guardrails"]
+    Backend --> Triage["TriageKit"]
+    Verify --> IA["Intent Audit"]
+    Intel --> RepoLens["RepoLens"]
+    Structure --> DS2["DS2"]
+    Memory --> SCP["SCP"]
+    Failure --> SFA["System Failure Analysis"]
+    Failure --> Safety["Safety Valve"]
+    SCP -. "context can inform review" .-> IA
+    DS2 -. "structural evidence can inform review" .-> IA
+    SFA -. "failure evidence can inform regression criteria" .-> IA
 ```
 
-Mermaid source: [assets/architecture.mmd](assets/architecture.mmd)
+Mermaid source: [assets/architecture.mmd](assets/architecture.mmd).
 
-## Layer 1: Engineering Memory
+## Backend and Runtime Reliability
 
-Engineering memory addresses context loss, repeated explanation, and poor handoff between development sessions.
+[TriageKit](https://github.com/ragnarok268/TriageKit) is an independent FastAPI service. It implements authentication, persistence, migration, provider boundaries, reliability metadata, logging, request IDs, bounded transient-failure retries, health endpoints, Docker Compose, CI, and tests.
 
-### Agent Memory Layer
+## Verification and Intent Preservation
 
-[Agent Memory Layer](https://github.com/ragnarok268/agent-memory-layer) provides repository-local engineering memory for AI-assisted software development. It preserves engineering intent, architectural decisions, project knowledge, and structured workflows across development sessions.
+[Intent Audit](https://github.com/ragnarok268/IA) (repository `IA`) is a local CLI that checks a deliberately small machine-readable intent contract and writes deterministic receipts. Canary is its diagnostic path for failed verification, with evidence, classification, bounded hypotheses, repair recommendations, and regression guidance.
 
-Inputs:
+## Repository Intelligence
 
-- repository context
-- project instructions
-- engineering decisions
-- workflow records
-- session handoff material
+[RepoLens](https://github.com/ragnarok268/RepoLens) performs local repository scanning, deterministic chunking, vector persistence, citation-grounded retrieval, and architecture summarization. It is not presented as a TriageKit runtime dependency.
 
-Outputs:
+## Structural and Dependency Analysis
 
-- reusable project memory
-- structured context for future AI-assisted work
-- preserved engineering intent
-- reduced repeated explanation across sessions
+[DS2](https://github.com/ragnarok268/DS2) maps declared dependencies, observed imports, exposure classes, and inherited authority into reports, graphs, and receipts. Static output does not prove runtime reachability.
 
-### SCP
+## Engineering Memory and Context
 
-[SCP](https://github.com/ragnarok268/scp) is a persistent engineering knowledge and decision-preservation model. It captures project origins, milestones, rationale, constraints, and significant engineering decisions so context survives across sessions and contributors.
+[SCP](https://github.com/ragnarok268/scp) preserves adoption-forward decisions in validated YAML records and provides repository identity and boundary preflight checks.
 
-Inputs:
+## Failure Analysis and Guardrails
 
-- project origins
-- significant decisions
-- constraints
-- rationale
-- evidence and future traps
+[System Failure Analysis](https://github.com/ragnarok268/system-failure-analysis) contains evidence-bounded engineering case studies. [Safety Valve](https://github.com/ragnarok268/safety-valve) is a separate local reference artifact for deterministic pre-inference policy routing.
 
-Outputs:
+## Relationship Boundaries
 
-- durable semantic cards
-- decision records
-- milestone records
-- reviewable reasoning history from adoption forward
+Dashed arrows mean that an artifact *can inform* a review. They do not claim an implemented API call, shared deployment, automated orchestration, or production integration. TriageKit and RepoLens are intentionally shown without invented cross-project edges.
 
-## Layer 2: Verification
-
-Verification addresses intent drift, weak acceptance criteria, and difficulty reviewing AI-generated changes.
-
-### IA
-
-[IA](https://github.com/ragnarok268/IA) is a deterministic verification system for checking AI-generated changes against engineering intent. It supports intent validation, architectural drift detection, constraint verification, and engineering receipts.
-
-Current Hydra milestone: IA's completed Canary capabilities include deterministic diagnostics, evidence collection, failure classification, grounded hypotheses, bounded repair recommendations, regression guidance, and validation.
-
-Inputs:
-
-- stated engineering intent
-- implementation changes
-- constraints
-- acceptance criteria
-- architectural expectations
-
-Outputs:
-
-- verification results
-- drift findings
-- constraint checks
-- engineering receipts
-- review evidence
-
-## Layer 3: Structural Awareness
-
-Structural awareness addresses dependency blind spots, inherited execution authority, and unclear capability surfaces.
-
-### DS²
-
-[DS2](https://github.com/ragnarok268/DS2) is a dependency surface and structural analysis system. It maps dependency relationships, inherited execution authority, structural risk, and capability surfaces to improve architectural awareness and engineering governance.
-
-Inputs:
-
-- repository files
-- dependency manifests
-- import relationships
-- framework and runtime structure
-
-Outputs:
-
-- dependency graphs
-- structural risk summaries
-- authority surface analysis
-- reviewable reports and receipts
-
-## Layer 4: Failure Learning
-
-Failure learning addresses repeated mistakes, weak debugging memory, and regression risk.
-
-### System Failure Analysis
-
-[System Failure Analysis](https://github.com/ragnarok268/system-failure-analysis) is a framework for deterministic root-cause analysis, Failure Fingerprints, regression prevention, and evidence-driven debugging.
-
-Inputs:
-
-- observed failures
-- logs or traces where available
-- reproduction steps
-- system behavior
-- expected behavior
-
-Outputs:
-
-- likely root-cause analysis
-- Failure Fingerprints
-- prevention notes
-- regression-oriented evidence
-
-## Layer 5: Guardrails and Research
-
-Guardrails and research address bounded execution, reliable stopping behavior, and reliability-oriented AI workflow design.
-
-### Safety Valve
-
-[Safety Valve](https://github.com/ragnarok268/safety-valve) is a deterministic guardrail concept for AI-assisted engineering workflows.
-
-### GREEN
-
-[GREEN](https://github.com/ragnarok268/GREEN-public) is a supporting engineering framework for reliable AI workflow development.
-
-### Halt Invariant
-
-[Halt Invariant](https://github.com/ragnarok268/halt-invariant) covers research and engineering work related to deterministic stopping conditions and reliable AI behavior.
-
-## System Relationship
-
-The systems are designed to support a workflow in which AI accelerates implementation, while human-directed architecture, verification, documentation, testing, and review remain central.
-
-Agent Memory Layer and SCP preserve context and decisions. IA verifies changes against intent. DS² improves awareness of structural and dependency risk. System Failure Analysis turns failures into reusable evidence. Safety Valve, GREEN, and Halt Invariant explore guardrails and reliability constraints.
+Additional supporting repositories remain listed in [PROJECT_MAP.md](PROJECT_MAP.md), but the architecture prioritizes the strongest verified evidence.

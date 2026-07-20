@@ -1,23 +1,30 @@
 # Limitations
 
-These are open-source engineering systems and research-informed tools.
+This hub documents independent and open-source engineering work. Evidence and maturity vary by repository.
 
-They are not claimed to be production-scale enterprise infrastructure. They do not replace full MLOps, SRE, or security platforms.
+## Deployment and Adoption
 
-Some systems are early-stage. Some evidence may exist as examples, tests, receipts, or benchmark reports in the linked repositories rather than as mature operational deployments.
+- No production deployment, production traffic, or production-scale operation is claimed.
+- No customers, revenue, paid client work, commercial deployment, enterprise adoption, or customer usage is claimed.
+- Production-oriented practices are described only where supported by code, tests, configuration, or documentation.
+- Docker, health checks, authentication, retries, logging, migrations, and CI do not by themselves establish production operation.
 
-Adoption metrics are not claimed unless documented. This hub does not claim enterprise users, customers, revenue, funding, large-scale deployment, or enterprise readiness.
+## Contribution Status
 
-The purpose is to demonstrate architecture, verification, engineering judgment, documentation, and AI-native workflow design.
+No external pull requests have been submitted yet. No upstream patch submission, maintainer review, acceptance, or merge is claimed. Failure-analysis artifacts document investigation and contribution preparation only.
 
-## Important Boundaries
+## Evidence Depth
 
-- The systems are open-source and experimental unless a linked repository documents otherwise.
-- The systems are reference implementations and research-informed tooling, not formal platform replacements.
-- Benchmark numbers are not claimed in this hub unless documented in linked evidence.
-- Production-scale infrastructure, Kubernetes, GPU, CUDA, Terraform, cloud deployment, and formal MLOps capabilities are not claimed unless separately documented in a linked repository.
-- AI-assisted implementation remains subject to human review, tests, verification, and limitations.
+- Some repositories have implementation code, CI, automated tests, and committed artifacts; others are narrower reference implementations or case-study packages.
+- System Failure Analysis contains recovered patch evidence but explicitly documents missing runtime transcripts and unexecuted regression paths.
+- Static analysis cannot prove runtime reachability or safety.
+- Deterministic checks validate their declared scope; they do not guarantee general correctness.
+- Repository links and commit history are part of the review evidence.
 
-## Review Guidance
+## Benchmarks
 
-Reviewers should treat this repository as a navigation and documentation hub. For detailed evidence, inspect the linked repositories, tests, examples, receipts, and benchmark reports where available.
+No benchmark number is claimed by this hub unless a linked repository documents the result and methodology. Evaluated concerns, proposed scenarios, and future measurements must not be read as observed results. See [BENCHMARKS.md](BENCHMARKS.md).
+
+## Scope
+
+These repositories do not replace complete MLOps, SRE, security, SBOM, provenance, or observability platforms. See [ROADMAP.md](ROADMAP.md) for clearly future work.

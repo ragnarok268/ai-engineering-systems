@@ -1,29 +1,30 @@
 # Roadmap
 
-This roadmap focuses on practical improvements to the documentation hub and connected open-source systems.
+All items below are future work unless moved to a completed section with linked evidence.
 
-## Near-Term
+## Completed
 
-- improve diagrams
-- add repository cross-links
-- improve benchmark summaries
-- add examples
-- add reviewer guide refinements
+- Capability-first evidence hub and reviewer paths
+- Central capability-to-evidence matrix
+- Explicit deployment, contribution, and benchmark boundaries
 
-## Medium-Term
+## In Progress
 
-- add Docker examples where appropriate
-- add observability examples
-- add deployment-style demos
-- add more benchmark scenarios
+- None claimed in this hub at present.
 
-## Long-Term
+## Planned
 
-- explore integrations with AI coding agents
-- improve reproducibility
-- expand verification examples
-- collect external feedback
+- Add more direct links to test files, example outputs, and CI evidence where useful.
+- Add CI badges where linked repositories expose stable workflows.
+- Improve benchmark methodology summaries only when measurements exist.
+- Add reproducible examples and observability evidence to relevant repositories.
+- Add deployment-style demonstrations without presenting them as production deployment.
 
-## Roadmap Boundaries
+## Investigative
 
-These items are future-oriented and should not be read as completed production capabilities. Any future implementation should be documented with evidence, limitations, and review instructions.
+- Evaluate broader repository fixtures and performance measurements.
+- Explore integrations with coding agents.
+- Gather external feedback.
+- Prepare narrow external contributions after reproduction and verification.
+
+Planned and investigative items are not completed capabilities. Any future status change requires public evidence, limitations, and review instructions.

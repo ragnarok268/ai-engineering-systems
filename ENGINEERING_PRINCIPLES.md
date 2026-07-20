@@ -1,45 +1,45 @@
 # Engineering Principles
 
-## Architecture-First Engineering
+## Explicit Requirements
 
-Start with system boundaries, constraints, responsibilities, and expected evidence before implementation. AI-assisted coding is more useful when the architecture is explicit.
+Define expected behavior, acceptance evidence, and non-goals before implementation.
 
-## Verification-First Engineering
+## Constraints and Invariants
 
-Treat verification as part of the design, not a final checkbox. A change should be reviewable against intent, constraints, tests, and evidence.
+Identify boundaries that must remain true across implementation and failure paths. Encode them in tests, schemas, contracts, or review checklists where practical.
 
-## Cause to Effect Reasoning
+## Architecture Before Implementation Where Appropriate
 
-Prefer explanations that connect cause, mechanism, and outcome. This is especially important when debugging AI-assisted changes or reviewing system failures.
+Establish responsibilities, data flow, dependencies, and failure boundaries before editing when risk or complexity warrants it.
 
-## Deterministic Where Practical
+## Deterministic Validation Where Practical
 
-Use deterministic checks, structured records, explicit schemas, and repeatable workflows where they provide clarity. Not every engineering concern can be fully deterministic, but practical determinism reduces ambiguity.
+Prefer repeatable checks, structured records, stable outputs, and explicit schemas when they reduce ambiguity. Do not imply that all engineering judgment can be automated.
 
 ## Evidence Over Claims
 
-Prefer public artifacts, tests, benchmark reports, receipts, examples, and documented limitations over broad claims.
+Use source, tests, CI, receipts, reports, examples, documented measurements, and commit history. Distinguish executed evidence from estimates, hypotheses, and plans.
 
-## Engineering Memory
+## Cause-to-Effect Reasoning
 
-Important context should survive across sessions and contributors. Decisions, constraints, rationale, and future traps should be preserved when they are expensive to rediscover.
+Explain the mechanism connecting a condition to an outcome. Separate direct evidence from inference, especially during failure analysis.
 
-## Dependency Awareness
+## Regression Protection
 
-Dependencies carry behavior, authority, maintenance burden, and risk. AI-assisted development should include review of dependency surfaces and inherited execution authority.
+A correction is incomplete when the same failure can silently recur. Add tests or deterministic checks where practical and document any remaining verification gap.
 
-## Failure Fingerprints
+## Repository and Dependency Awareness
 
-Failures should be converted into reusable patterns where possible. A good failure record helps future work avoid repeating the same mistake.
+Verify the active repository before work. Treat dependencies as behavior, authority, maintenance, and risk surfaces that require review.
 
-## Regression Prevention
+## Inspectable Engineering Context
 
-Debugging is incomplete if the same issue can silently recur. Tests, receipts, documented failure patterns, and verification checks all contribute to regression prevention.
+Preserve expensive-to-rediscover decisions, constraints, rationale, and revisit conditions without pretending to reconstruct history that was not recorded.
 
-## Documentation as Engineering
+## Human Responsibility for AI-Assisted Work
 
-Documentation is part of the system. It explains intent, constraints, architecture, review paths, evidence, limitations, and future work.
+AI tools may accelerate drafting, exploration, testing, and mechanical edits. Humans remain responsible for architecture, constraints, review, verification, acceptance, and release decisions.
 
-## AI as Accelerator, Not Authority
+## Honest Boundaries
 
-AI tools can accelerate implementation, exploration, summarization, and testing. They do not own architecture, acceptance, verification, or release decisions.
+Distinguish production-oriented practices from production deployment. Do not infer users, scale, adoption, contribution status, or benchmark results from implementation intent alone.
